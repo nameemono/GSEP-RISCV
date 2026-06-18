@@ -72,7 +72,7 @@ export const CHENNAI_GALLERY: ImageCard[] = [
     title: "Marina Beach Sunset",
     subtitle: "Coastal Landmarks",
     description: "The second longest natural urban beach in the world, defining Chennai's beautiful scenic coastline.",
-    imageUrl: "https://images.unsplash.com/photo-1623812845233-a3d8ca779c46?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=800&q=80",
     size: "large"
   },
   {
@@ -173,54 +173,64 @@ export const TIMELINE_STEPS: TimelineStep[] = [
 
 export const CAMPUS_MAP_SPOTS: MapPoint[] = [
   {
-    id: "m_shakti",
-    name: "SHAKTI MICROCORE LABS",
+    id: "m_iitm",
+    name: "IIT MADRAS MAIN CAMPUS",
     coordinates: "12.9917° N | 80.2337° E",
-    description: "The birthplace of SHAKTI - India's flagship open-source CPU model engineered on customizable RISC-V ISA.",
-    fullDetail: "This high-grade VLSI center houses state-of-the-art server racks, FPGA development rigs, and dedicated GPU arrays. GSEP fellows obtain exclusive hardware terminal privileges here to run multi-million gate syntheses.",
-    category: "academic",
-    xPercent: 55,
-    yPercent: 41
-  },
-  {
-    id: "m_tapti",
-    name: "TAPTI HOSTEL",
-    coordinates: "12.9902° N | 80.2312° E",
-    description: "Premium student residency with dedicated high-speed internet, silent revision layouts, and lush green views.",
-    fullDetail: "Your five-week home. Includes single or clean twin-occupancy, modern power grid back-ups, 24/7 student laundry bays, and robust multi-factor security patrols around typical forest paths.",
-    category: "residential",
-    xPercent: 62,
-    yPercent: 58
-  },
-  {
-    id: "m_himalaya",
-    name: "HIMALAYA MESS",
-    coordinates: "12.9885° N | 80.2288° E",
-    description: "The massive landmark dining facility hosting aromatic, clean, multi-regional South Indian meals.",
-    fullDetail: "Serves daily fresh breakfast, nourishing lunches, and hot dinners. Includes unlimited dosa portions, sambar, vegetarian specials, fresh curds, and high-quality drinking water systems.",
-    category: "social",
-    xPercent: 35,
-    yPercent: 72
-  },
-  {
-    id: "m_oat",
-    name: "OPEN AIR THEATRE (OAT)",
-    coordinates: "12.9928° N | 80.2355° E",
-    description: "A cultural stadium layout hosting weekend cinema streams under high Chennai planetary stars.",
-    fullDetail: "Famed campus amphitheater where researchers, post-graduates, and global fellows gather for community talks, cultural fests, and deep science panels.",
-    category: "social",
-    xPercent: 80,
-    yPercent: 25
-  },
-  {
-    id: "m_gcentre",
-    name: "IITM HERITAGE CENTRE",
-    coordinates: "12.9938° N | 80.2304° E",
-    description: "Documenting decades of world-class technology research and collaborative international initiatives.",
-    fullDetail: "An inspiring gallery highlighting cooperation with international labs. Excellent layout containing custom static scale models of legendary local microchips.",
+    description: "The premier engineering institute, hosting advanced research frameworks amidst beautiful lush forests.",
+    fullDetail: "A serene 617-acre sanctuary home to rare wildlife like blackbucks, spotted deer, and pristine local foliage, creating an inspiring environment for engineers.",
     category: "heritage",
-    xPercent: 28,
-    yPercent: 30
+    xPercent: 50,
+    yPercent: 50,
+    lat: 12.9917,
+    lng: 80.2337
+  },
+  {
+    id: "m_shakti",
+    name: "SHAKTI MICROPROCESSOR LABS",
+    coordinates: "12.9912° N | 80.2307° E",
+    description: "The birthplace of India's first indigenous RISC-V processor models, engineered entirely by local research groups.",
+    fullDetail: "GSEP fellows obtain hands-on privileges here to run syntheses and explore hardware architectures on actual ARM and Shakti microprocessor models.",
+    category: "academic",
+    xPercent: 40,
+    yPercent: 40,
+    lat: 12.9912,
+    lng: 80.2307
+  },
+  {
+    id: "m_research_park",
+    name: "IIT RESEARCH PARK",
+    coordinates: "12.9863° N | 80.2425° E",
+    description: "Asia's top technology park bridging academic research and corporate innovation with state-of-the-art incubation hubs.",
+    fullDetail: "Collaborative tech park facilitating groundbreaking work in electronics, deep tech, and microchips validation.",
+    category: "academic",
+    xPercent: 60,
+    yPercent: 70,
+    lat: 12.9863,
+    lng: 80.2425
+  },
+  {
+    id: "m_marina_beach",
+    name: "MARINA BEACH",
+    coordinates: "13.0405° N | 80.2810° E",
+    description: "The iconic, longest natural urban beach in the country, bounding Chennai's coastal skyline.",
+    fullDetail: "Located a short drive from the IITM campus, offering a breezy seaside getaway after rigorous software tape-out sessions.",
+    category: "social",
+    xPercent: 85,
+    yPercent: 20,
+    lat: 13.0405,
+    lng: 80.2810
+  },
+  {
+    id: "m_phoenix_mall",
+    name: "PHOENIX MARKETCITY",
+    coordinates: "12.9847° N | 80.2202° E",
+    description: "A premier modern lifestyle center and shopping hub situated close to the campus.",
+    fullDetail: "Features modern dining, cinema screens, and retail spaces-perfect for GSEP fellows to unwind on weekends.",
+    category: "social",
+    xPercent: 20,
+    yPercent: 80,
+    lat: 12.9847,
+    lng: 80.2202
   }
 ];
 

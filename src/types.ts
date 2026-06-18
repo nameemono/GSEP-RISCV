@@ -45,9 +45,11 @@ export interface MapPoint {
   coordinates: string;
   description: string;
   fullDetail: string;
-  category: 'academic' | 'residential' | 'social' | 'heritage';
+  category: 'academic' | 'residential' | 'social' | 'heritage' | 'leisure';
   xPercent: number; // For position on blueprint map
   yPercent: number; // For position on blueprint map
+  lat?: number;
+  lng?: number;
 }
 
 export interface TimelineStep {

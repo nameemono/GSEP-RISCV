@@ -50,3 +50,16 @@ body {
   animation: circuitFlow 20s linear infinite reverse;
 }
 
+@keyframes radarSweep {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
