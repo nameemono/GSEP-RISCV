@@ -1,0 +1,6 @@
+{
+  "name": "GSEP RISC-V Programme",
+  "description": "Global Semiconductor Engineering Programme training journey, Chennai preparation guide, IC design curriculum, and application portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
