@@ -69,51 +69,35 @@ export const PACKING_ITEMS: SuitcaseItem[] = [
 export const CHENNAI_GALLERY: ImageCard[] = [
   {
     id: "g1",
-    title: "IIT Madras Main Gate",
-    subtitle: "IIT Madras Main Gate",
-    description: "The historical forest entry of IIT Madras, a scenic sanctuary containing spotted deer, blackbucks, and premium microelectronics labs.",
-    imageUrl: "https://images.unsplash.com/photo-1562774053-401386df7f56?auto=format&fit=crop&w=1200&q=80", // Premium university visual
+    title: "Marina Beach Sunset",
+    subtitle: "Coastal Landmarks",
+    description: "The second longest natural urban beach in the world, defining Chennai's beautiful scenic coastline.",
+    imageUrl: "https://images.unsplash.com/photo-1623812845233-a3d8ca779c46?auto=format&fit=crop&w=800&q=80",
     size: "large"
   },
   {
     id: "g2",
-    title: "Chennai Skyline & Heritage",
-    subtitle: "Chennai Skyline & Heritage",
-    description: "Built alongside the Bay of Bengal, Chennai bridges 400-year old stone shrines with futuristic IT parks.",
-    imageUrl: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80", // Temple skyline
-    size: "wide"
-  },
-  {
-    id: "g3",
-    title: "Marina Beach At Sunset",
-    subtitle: "Marina Beach At Sunset",
-    description: "Sandy coastline running across 13 kilometers, the second longest natural urban beach in the entire world.",
-    imageUrl: "https://images.unsplash.com/photo-1623812845233-a3d8ca779c46?auto=format&fit=crop&w=800&q=80", // Sandy coastline / sunset beach
+    title: "South Indian Cuisine",
+    subtitle: "Culinary Legacy",
+    description: "Gourmet delights consisting of Crispy Ghee Dosas and steaming Idlis paired with rich Madras Filter Coffee.",
+    imageUrl: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
     size: "tall"
   },
   {
-    id: "g4",
-    title: "South Indian Culinary Delights",
-    subtitle: "South Indian Culinary Delights",
-    description: "Aromatic breakfast delicacies: steaming idlis, crispy golden paper dosas, and robust Madras filter coffee served in metal cups.",
-    imageUrl: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80", // South Indian breakfast dosa
-    size: "small-square"
-  },
-  {
-    id: "g5",
-    title: "Sylvan Campus Roads & Wildlife",
-    subtitle: "Sylvan Campus Roads",
-    description: "Shaded canopies running thousands of meters, providing dynamic walk paths between dorm accommodation complexes and computing centers.",
-    imageUrl: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80", // Forest/shaded road with some architecture
-    size: "small-square"
-  },
-  {
-    id: "g6",
-    title: "Collaborative Labs & Hubs",
-    subtitle: "Collaborative Labs & Hubs",
-    description: "GSEP fellows working side-by-side with local research scientists inside deep silicon innovation spaces.",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80", // Tech people hardware collaboration
+    id: "g3",
+    title: "IIT Madras Research Park",
+    subtitle: "Innovation Nexus",
+    description: "India's premier state-of-the-art industry-academia base containing leading VLSI foundries and scientific teams.",
+    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     size: "wide"
+  },
+  {
+    id: "g4",
+    title: "Modern Chennai Skyline",
+    subtitle: "Metropolitan Progress",
+    description: "A fast-growing technological master hub blending ancient monument architecture with massive high-tech zones.",
+    imageUrl: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80",
+    size: "small-square"
   }
 ];
 

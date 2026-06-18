@@ -118,6 +118,31 @@ export default function InteractiveMap() {
             })}
           </div>
 
+          {/* Quick interactive location nodes selection row */}
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-4 mb-4 pt-4 border-t border-white/5 z-10 relative">
+            {CAMPUS_MAP_SPOTS.map((spot, idx) => {
+              const isSelected = selectedSpot.id === spot.id;
+              return (
+                <button
+                  key={spot.id}
+                  onClick={() => setSelectedSpot(spot)}
+                  onMouseEnter={() => setHoveredSpot(spot)}
+                  onMouseLeave={() => setHoveredSpot(null)}
+                  type="button"
+                  class={`p-2.5 rounded-xl border text-left transition-all duration-300 cursor-pointer ${
+                    isSelected 
+                      ? 'bg-[#D9B15D]/10 border-[#D9B15D] shadow-[0_0_15px_rgba(217,177,93,0.1)]' 
+                      : 'bg-[#07111F]/60 border-white/5 hover:border-[#D9B15D]/30 hover:bg-[#101D34]'
+                  }`}
+                >
+                  <div class="text-[9px] font-mono text-[#D9B15D] font-bold mb-0.5">0{idx + 1} // NODE</div>
+                  <div class="text-[10px] font-bold text-white tracking-tight uppercase truncate">{spot.name.replace(" ROOMS", "").replace(" SYSTEM", "")}</div>
+                  <div class="text-[9px] font-mono text-[#93A4BC] uppercase scale-90 origin-left mt-0.5">{spot.category}</div>
+                </button>
+              );
+            })}
+          </div>
+
           <p class="text-[11px] text-[#93A4BC] font-mono italic flex items-center gap-1">
             <Sparkles class="w-3 h-3 text-[#D9B15D] shrink-0" /> Note: Touch or click any of the golden glowing navigation nodes over the motherboard canvas to compile geodata coordinates.
           </p>

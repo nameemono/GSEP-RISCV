@@ -28,3 +28,25 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #1d3557;
 }
+
+@keyframes circuitFlow {
+  from {
+    stroke-dashoffset: 120;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-circuit-flow {
+  animation: circuitFlow 15s linear infinite;
+}
+
+.animate-circuit-flow-fast {
+  animation: circuitFlow 10s linear infinite;
+}
+
+.animate-circuit-flow-reverse {
+  animation: circuitFlow 20s linear infinite reverse;
+}
+

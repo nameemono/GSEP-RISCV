@@ -39,6 +39,7 @@ import ApplicationStepCard from './components/ApplicationStepCard';
 import CommandCenter from './components/CommandCenter';
 import SuitcasePacker from './components/SuitcasePacker';
 import InteractiveMap from './components/InteractiveMap';
+import ChipLogo from './components/ChipLogo';
 
 // Static Data
 import { 
@@ -98,11 +99,9 @@ export default function App() {
           
           {/* Logo with chip outline element */}
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg border border-[#D9B15D]/40 flex items-center justify-center bg-[#101D34]/80">
-              <span class="text-xs font-mono font-black text-[#D9B15D]">GSEP</span>
-            </div>
+            <ChipLogo size={36} glow={true} />
             <div>
-              <h1 class="text-xs font-mono font-black tracking-widest text-white leading-none">RISC-V PROGRAMME</h1>
+              <h1 class="text-xs font-mono font-black tracking-widest text-white leading-none">GSEP RISC-V</h1>
               <span class="text-[9px] font-mono text-[#93A4BC] tracking-wider">IIT MADRAS × MALAYSIA SYNC</span>
             </div>
           </div>
@@ -168,10 +167,34 @@ export default function App() {
       </AnimatePresence>
 
       {/* SECTION 1 — HERO SECTION */}
-      <section id="hero-block" class="pt-16 pb-24 px-4 md:px-6 relative text-center">
+      <section id="hero-block" class="pt-16 pb-24 px-4 md:px-6 relative text-center overflow-hidden">
         {/* Soft Gold/Blue Background Ambient Glows */}
         <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-500/10 rounded-full blur-[140px] pointer-events-none"></div>
         <div class="absolute top-20 left-1/3 w-[300px] h-[300px] bg-yellow-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+        {/* Symmetrical Silicon Circuit Lines with Flowing Electron Signals */}
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-45">
+          <svg className="absolute w-full h-full stroke-[#D9B15D]/25 stroke-[1.5] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] pointer-events-none select-none" fill="none" style={{ minWidth: '1200px', left: '50%', transform: 'translateX(-50%)' }}>
+            {/* Horizontal flow lines */}
+            <path d="M 50,80 L 350,80 L 400,130 L 650,130" strokeDasharray="8 4" className="animate-circuit-flow text-[#D9B15D]" />
+            <path d="M 1200,60 L 950,60 L 900,110 L 700,110" strokeDasharray="8 4" className="animate-circuit-flow-reverse text-[#D9B15D]" />
+            <path d="M 100,500 L 250,500 L 300,450 L 550,450" strokeDasharray="6 3" className="animate-circuit-flow-fast text-[#D9B15D]" />
+            <path d="M 1100,480 L 900,480 L 850,420 L 750,420" strokeDasharray="6 3" className="animate-circuit-flow-reverse text-[#D9B15D]" />
+            
+            {/* Silicon Nodes */}
+            <circle cx="400" cy="130" r="3.5" fill="#D9B15D" className="animate-pulse" />
+            <circle cx="650" cy="130" r="5" fill="#D5AB55" />
+            <circle cx="900" cy="110" r="3" fill="#D9B15D" className="animate-pulse" />
+            <circle cx="700" cy="110" r="4" fill="#D5AB55" />
+            <circle cx="300" cy="450" r="3.5" fill="#D9B15D" className="animate-pulse" />
+            <circle cx="550" cy="450" r="5" fill="#D5AB55" />
+            <circle cx="850" cy="420" r="3" fill="#D9B15D" className="animate-pulse" />
+            <circle cx="750" cy="420" r="4" fill="#D5AB55" />
+          </svg>
+        </div>
+
+        {/* Soft Radial Gold Glow Right Behind Headline */}
+        <div class="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[280px] bg-gradient-to-r from-[#D9B15D]/10 to-[#F0C87A]/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
         <div class="max-w-4xl mx-auto">
           {/* Symmetrical Top Badge ribbon */}
@@ -384,11 +407,72 @@ export default function App() {
             subtitle="Known as the Detroit of Asia, Chennai hosts a colossal electronic hardware ecosystem and prestigious Indian Institute banyans."
           />
 
-          {/* Grid Pinterest-style representation */}
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {CHENNAI_GALLERY.map((card) => (
-              <GalleryCard key={card.id} card={card} />
-            ))}
+          {/* Symmetrical Bento Grid for photos and highlighted Why Chennai card */}
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-7xl mx-auto">
+            
+            {/* Left: Photos Grid */}
+            <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {CHENNAI_GALLERY.map((card) => (
+                <GalleryCard key={card.id} card={card} />
+              ))}
+            </div>
+
+            {/* Right: Why Chennai? Premium Highlight Card */}
+            <div class="lg:col-span-4 bg-[#101D34]/90 border border-[#D9B15D]/40 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+              <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#D9B15D] to-transparent"></div>
+              <div class="absolute -right-16 -top-16 w-32 h-32 bg-[#D9B15D]/5 rounded-full blur-2xl pointer-events-none"></div>
+              
+              <div>
+                <span class="text-[10px] font-mono text-[#D9B15D] tracking-widest font-semibold uppercase block mb-1">STRATEGIC HUB LOCUS</span>
+                <h3 class="text-2xl font-black text-white font-display mb-6 tracking-tight uppercase">
+                  Why Chennai?
+                </h3>
+                
+                <div class="space-y-6">
+                  {/* Point 1 */}
+                  <div class="flex gap-3">
+                    <div class="w-2 h-2 rounded-full bg-[#D9B15D] mt-2 shrink-0"></div>
+                    <div>
+                      <h4 class="text-xs font-mono font-bold text-white uppercase tracking-wider">Semiconductor Ecosystem</h4>
+                      <p class="text-[11px] text-[#93A4BC] leading-relaxed mt-1">Host to leading electronic silicon testing, advanced board assembly, and massive semiconductor design networks.</p>
+                    </div>
+                  </div>
+
+                  {/* Point 2 */}
+                  <div class="flex gap-3">
+                    <div class="w-2 h-2 rounded-full bg-[#D9B15D] mt-2 shrink-0"></div>
+                    <div>
+                      <h4 class="text-xs font-mono font-bold text-white uppercase tracking-wider">IIT Madras (Rank #1)</h4>
+                      <p class="text-[11px] text-[#93A4BC] leading-relaxed mt-1 font-sans">Home of the national Shakti microprocessor open core and ranked India's top technology university for over six years.</p>
+                    </div>
+                  </div>
+
+                  {/* Point 3 */}
+                  <div class="flex gap-3">
+                    <div class="w-2 h-2 rounded-full bg-[#D9B15D] mt-2 shrink-0"></div>
+                    <div>
+                      <h4 class="text-xs font-mono font-bold text-white uppercase tracking-wider">Growing Tech Corridor</h4>
+                      <p class="text-[11px] text-[#93A4BC] leading-relaxed mt-1">Colossal technology incubators, multi-tier software parks, and modern R&amp;D foundry groups along the IT Expressway corridor.</p>
+                    </div>
+                  </div>
+
+                  {/* Point 4 */}
+                  <div class="flex gap-3">
+                    <div class="w-2 h-2 rounded-full bg-[#D9B15D] mt-2 shrink-0"></div>
+                    <div>
+                      <h4 class="text-xs font-mono font-bold text-white uppercase tracking-wider">Global Engineering Catalyst</h4>
+                      <p class="text-[11px] text-[#93A4BC] leading-relaxed mt-1">Direct professional alignment pathways connecting top-tier GSEP scholars directly into the international semiconductor industry.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-[#93A4BC]">
+                <span>SILICON FOUNDRY REVOLUTION</span>
+                <span class="text-[#D9B15D]">MAA SOURCE ENGINE</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -514,6 +598,19 @@ export default function App() {
             title="IC Design Training Syllabus"
             subtitle="Acquire real competency on open-source toolchains, compiling, timing and layout routines supervised by veteran engineers."
           />
+
+          {/* Symmetrical Tech/Hardware Skill Badges Row */}
+          <div class="flex flex-wrap items-center justify-center gap-3 mb-12 max-w-4xl mx-auto z-10 relative">
+            {['RISC-V', 'RTL Design', 'Verification', 'ASIC Design', 'Physical Design'].map((badgeName) => (
+              <div 
+                key={badgeName}
+                class="flex items-center gap-2 bg-[#101D34] border border-[#D9B15D]/20 hover:border-[#D9B15D] text-[#D8E3F2] hover:text-white px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all duration-300 hover:scale-[1.03] cursor-default shadow-md shadow-[#D9B15D]/5"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D9B15D] animate-pulse"></span>
+                <span>{badgeName}</span>
+              </div>
+            ))}
+          </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
             
@@ -746,30 +843,65 @@ export default function App() {
       </section>
 
       {/* PREMIUM CORPORATE FOOTER */}
-      <footer class="bg-[#07111F] border-t border-white/8 py-12 text-[#93A4BC] text-xs font-mono">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded bg-[#101D34] flex items-center justify-center border border-[#D9B15D]/20">
-              <span class="text-xs text-[#D9B15D] font-bold">G</span>
+      <footer class="bg-[#07111F] border-t border-white/8 pt-16 pb-12 text-[#93A4BC] text-xs font-mono">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-white/5">
+            
+            {/* Column 1: Custom Block Logo */}
+            <div class="md:col-span-4 space-y-4">
+              <div class="flex items-center gap-3">
+                <ChipLogo size={32} glow={false} />
+                <div>
+                  <p class="text-white font-black text-sm tracking-widest leading-none">GSEP RISC-V</p>
+                  <p class="text-[9px] text-[#93A4BC] tracking-wider uppercase mt-1">Silicon Gateway Initiative</p>
+                </div>
+              </div>
+              <p class="text-[11px] text-[#93A4BC] leading-relaxed max-w-sm normal-case font-sans">
+                A premium, bilateral scholarship fellowship bridging academia with multinational semiconductor architectures to empower next-generation silicon engineering designers.
+              </p>
             </div>
-            <div>
-              <p class="text-white font-bold text-xs tracking-wider">GSEP RISC-V PROGRAMME</p>
-              <p class="text-[10px] text-[#93A4BC]">Global Semiconductor Engineering Development Initiative</p>
+
+            {/* Column 2: Quick Links */}
+            <div class="md:col-span-4 space-y-4">
+              <p class="text-xs font-bold text-white uppercase tracking-wider">// Quick Coordinates</p>
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-[11px]">
+                <button onClick={() => scrollToSection('hero-block')} class="text-left hover:text-white cursor-pointer transition uppercase">Overview</button>
+                <button onClick={() => scrollToSection('program-timeline')} class="text-left hover:text-white cursor-pointer transition uppercase">Journey</button>
+                <button onClick={() => scrollToSection('facility-showcase')} class="text-left hover:text-white cursor-pointer transition uppercase">Accommodation</button>
+                <button onClick={() => scrollToSection('hands-on-training')} class="text-left hover:text-white cursor-pointer transition uppercase">Training</button>
+                <button onClick={() => scrollToSection('applications-process')} class="text-left hover:text-white cursor-pointer transition uppercase">Apply</button>
+                <button onClick={() => scrollToSection('essential-facts')} class="text-left hover:text-white cursor-pointer transition uppercase">Contact</button>
+              </div>
+            </div>
+
+            {/* Column 3: Contact Info */}
+            <div class="md:col-span-4 space-y-4">
+              <p class="text-xs font-bold text-white uppercase tracking-wider">// Programme Team Contacts</p>
+              <div class="space-y-2 text-[11px]">
+                <div class="flex gap-2">
+                  <span class="text-[#D9B15D] shrink-0">Secretariat:</span>
+                  <span class="text-white">GSEP Operations Secretariat Coordinator</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[#D9B15D] shrink-0">Official Email:</span>
+                  <a href="mailto:operations@gsep-semiconductor.org" class="text-[#D9B15D] hover:underline hover:text-[#F1C679] transition">operations@gsep-semiconductor.org</a>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[#D9B15D] shrink-0">Support Desk:</span>
+                  <span class="text-[#93A4BC]">IITM Campus Sync Hub, Block B</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-zinc-500">
+            <p>© 2026 GSEP Executive Council × Academic Sync Board. All rights reserved.</p>
+            <div class="flex items-center gap-4 text-[9px]">
+              <span class="border border-emerald-500/20 text-emerald-400 bg-emerald-500/5 px-2 py-0.5 rounded">TAPE-OUT VERIFIED</span>
+              <span class="border border-[#D9B15D]/20 text-[#D9B15D] bg-[#D9B15D]/5 px-2 py-0.5 rounded">RISC-V COMPLIANT SHA-256</span>
             </div>
           </div>
-
-          <div class="flex flex-wrap items-center gap-6 text-[11px]">
-            <span class="hover:text-white cursor-pointer transition" onClick={() => scrollToSection('hero-block')}>Top Entry</span>
-            <span class="hover:text-white cursor-pointer transition" onClick={() => scrollToSection('programme-overview')}>Curricular Details</span>
-            <span class="hover:text-white cursor-pointer transition" onClick={() => scrollToSection('command-center-widget')}>Command Center Workspace</span>
-          </div>
-
-          <div class="text-center md:text-right text-[10px] text-zinc-500">
-            <p>© 2026 GSEP Executive Board. Compiled for IIT Madras academic sync.</p>
-            <p class="mt-1">Designed for elite digital IC design semiconductor placement.</p>
-          </div>
-
         </div>
       </footer>
 
